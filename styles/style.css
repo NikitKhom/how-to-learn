@@ -15,6 +15,7 @@
   display: flex;
   position: relative;
   margin-bottom: 100px;
+  z-index: 1;
 }
 
 .logo {
@@ -27,7 +28,6 @@
   position: absolute;
   left: 64px;
   top: 30px;
-  z-index: 3;
 }
 
 .header__title {
@@ -36,17 +36,17 @@
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
+  margin: 0;
   margin-left: 64px;
-  z-index: 2;
 }
 
 .header__subtitle {
+  margin: 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
   width: 388px;
   position: absolute;
-  z-index: 2;
   left: 64px;
   bottom: 30px;
 }
@@ -62,7 +62,7 @@
   position: absolute;
   right: 0px;
   bottom: 0px;
-  z-index: 1;
+  z-index: -1;
 }
 
 .header__square-pic {
@@ -72,7 +72,7 @@
   position: absolute;
   right: 0px;
   top: 64px;
-  z-index: 0;
+  z-index: -2;
 }
 
 .description {
@@ -142,6 +142,7 @@
 
 .table {
   margin: 0 auto;
+  padding-left: 0;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -169,11 +170,13 @@
 }
 
 .feynman {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  background: url(../images/feynman.png) no-repeat;
+  background: #f2f2f2 url(../images/feynman.png) no-repeat;
   background-position: left bottom;
   background-size: 867px 637px;
-  height: 890px;
+  min-height: 890px;
   position: relative;
 }
 
@@ -183,7 +186,7 @@
   width: 648px;
   line-height: 1.15;
   font-size: 120px;
-  font-weight: 600px; 
+  font-weight: 600; 
 }
 
 .feynman__subtitle {
@@ -210,6 +213,7 @@
   background-color: #1f1f1f;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .section__title_theme_dark {
@@ -230,7 +234,6 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
-  z-index: 1;
 }
 
 .kaufman__triangle {
@@ -241,10 +244,11 @@
   right: -210px;
   background-image: url(../images/kaufman-triangle.svg);
   background-size: 877px;
-  z-index: 0;
+  z-index: -1;
 }
 
 .footer {
+  box-sizing: border-box;
   display: flex;
   background-color: #1f1f1f;
   min-height: 350px;
@@ -253,11 +257,12 @@
   padding-bottom: 40px;
 }
 
-.footer__column {
+.footer__columns {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   width: 90%; 
+  border: 1px solid red;
 }
 
 .logo_place_footer {
@@ -269,6 +274,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 711px;
+  border: 1px solid red;
 }
 
 .footer__author {
