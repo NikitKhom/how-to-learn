@@ -1,6 +1,6 @@
 .two-columns__paragraph {
-    margin: 0;
-    font-weight: normal;
+  margin: 0;
+  font-weight: normal;
   }
 
 .two-columns__paragraph:not(:last-child) {
